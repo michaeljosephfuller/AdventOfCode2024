@@ -4,4 +4,4 @@ This repository contains code snippets that I have used to solve problems on [Ad
 
 I find that I can get cracking with many of the problems quickly using Python, so you will usually find code snippets in this language. Occasionally I might use other languages for code practice.
 
-Latest solution: [Day w](https://github.com/michaeljosephfuller/AdventOfCode2024/blob/main/day_2/main.py), 12th December 2024
+Latest solution: [Day 2](https://github.com/michaeljosephfuller/AdventOfCode2024/blob/main/day_2/main.py), 12th December 2024
