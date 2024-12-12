@@ -8,7 +8,8 @@ The solution class below takes a text file ("day_2/unusual_data.txt"), which con
 - strictly increasing/decreasing
 - any two adjacent levels (numbers) in a report differ by 1, 2, or 3
 
-and (ii) TBC.'''
+and (ii) the total number of safe "dampened" reports: as in the above, but it is permitted to
+remove any one element of the report.'''
 
 
 class Solution:
