@@ -21,9 +21,9 @@ class Solution:
 
     def _convert_text_file_lines_to_list(self) -> list[list[int]]:
         '''Creates a list of reports of each line in self.filepath. Each report is a list of integers.'''
-        file = open(self.filepath, "r")
-        data = file.read()
-        list_of_reports_str = [report.split(self.separator) for report in data.split("\n")] # e.g. [['1', '3', '4', '5', '2'], ['5', '7', '5', '3', '1'], ...]
+        with open(self.filepath, "r") as file:
+            data = file.read()
+            list_of_reports_str = [report.split(self.separator) for report in data.split("\n")] # e.g. [['1', '3', '4', '5', '2'], ['5', '7', '5', '3', '1'], ...]
         return [[int(level) for level in report] for report in list_of_reports_str] # e.g. [[1, 3, 4, 5, 2], [5, 7, 5, 3, 1], ...]
 
 

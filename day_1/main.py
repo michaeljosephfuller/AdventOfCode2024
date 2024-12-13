@@ -19,8 +19,8 @@ class Solution:
 
     def _convert_text_file_lines_to_list(self) -> list[str]:
         '''Creates a list of strings of each line in self.filepath'''
-        file = open(self.filepath, "r")
-        data = file.read()
+        with open(self.filepath, "r") as file:
+            data = file.read()
         return data.split("\n") 
 
 
