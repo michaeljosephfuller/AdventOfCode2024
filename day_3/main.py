@@ -2,7 +2,17 @@
 
 https://adventofcode.com/2024/day/3
 
-'''
+The solution class below takes a text file ("day_3/corrupted_data.txt"), which contains substrings
+of the form "mul(x,y)" where x, y are integers, and finds:
+
+(i) the sum of all multiplications of x and y in instances of "mul(x,y)"
+(ii) the same sum but only counting "enabled" multiplications. 
+
+Multiplications are "enabled" and "disabled" by the substrings "do()" and "don't()" rescpectively:
+any instance of "mul(x,y)" found after a "don't()" substring won't count, until a "do()" substring
+appears.
+
+My solution leverages the RegEx Python package, re.'''
 
 
 import re
