@@ -37,19 +37,21 @@ class Solution:
     
 
     def remove_disabled_multiplications(self):
-        '''Update self.text with substrings of disabled multiplications removed'''
-        
+        '''Update self.text with all disabled multiplications removed'''
         # Fully sandwiched don't() ... do()
-        disabled_substrings = re.findall("don't\(\).*?do\(\)", self.text)
-        for substring in disabled_substrings:
-            # print(substring, "\n")
-            self.text = self.text.replace(substring, "") 
+        disabled_substrings_full = re.findall("don't\(\).*?do\(\)", self.text)
+        self._remove_substrings(disabled_substrings_full)
 
         # Edge case: don't()... at the end
-        disabled_substrings = re.findall("don't\(\).*", self.text)
-        for substring in disabled_substrings:
+        disabled_substrings_end = re.findall("don't\(\).*", self.text)
+        self._remove_substrings(disabled_substrings_end)
+
+
+    def _remove_substrings(self, substrings: list[str]):
+        '''Update self.text with substrings removed'''
+        for substring in substrings:
             # print(substring, "\n")
-            self.text = self.text.replace(substring, "")    
+            self.text = self.text.replace(substring, "") 
 
 
 if __name__ == "__main__":
